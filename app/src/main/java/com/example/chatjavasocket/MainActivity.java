@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    socket = new Socket("192.168.137.120",1001);
+                    socket = new Socket("ip",1001);
                     out = new PrintWriter(socket.getOutputStream());
                     out.println(nomeUsuario);
                 } catch (IOException e) {
@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 try {
                     if(socket == null){
-                        socket = new Socket("192.168.0.114",1001);
+                        socket = new Socket("ip",1001);
                     }
                     if(texto.equalsIgnoreCase("sair")){
                         out = new PrintWriter(socket.getOutputStream(), true);
