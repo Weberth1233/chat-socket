@@ -158,14 +158,15 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 try {
                     if(socket == null){
-                        socket = new Socket("ip",1001);
+                        socket = new Socket("172.16.104.184",1001);
                     }
                     if(texto.equalsIgnoreCase("sair")){
                         out = new PrintWriter(socket.getOutputStream(), true);
                         out.println(texto);
+                    }else{
+                        out = new PrintWriter(socket.getOutputStream(), true);
+                        out.println(nome+": "+texto);
                     }
-                    out = new PrintWriter(socket.getOutputStream(), true);
-                    out.println(nome+": "+texto);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

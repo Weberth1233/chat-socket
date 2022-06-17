@@ -6,60 +6,23 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@drawable/fundo">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="MissingConstraints"
-        android:orientation="vertical">
-
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/conectar"
-            android:layout_width="74dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="22dp"
-            android:layout_marginRight="18dp"
-            android:background="@drawable/custom_button"
-            android:text="conectar"
-            android:textColor="@color/white"
-            android:textSize="11dp"></androidx.appcompat.widget.AppCompatButton>
-
-        <EditText
-            android:id="@+id/texto"
-            android:background="@drawable/custom_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autoSizeTextType="uniform"
-            android:ems="10"
-            android:padding="13dp"
-            android:textSize="12dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:backgroundTint="@color/white"
-            android:hint="Digite seu nome"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:inputType="textPersonName"></EditText>
-
-        <Button
-            android:id="@+id/enviar"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@color/design_default_color_primary"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/white"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_toRightOf="@+id/texto"
-            android:text="Enviar"></Button>
-
+    android:background="@drawable/fundo2"
+    >
+    <Button
+        android:id="@+id/conectar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conectar"
+        android:layout_margin="12dp"
+        tools:ignore="MissingConstraints">
+    </Button>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:focusable="auto"
         android:overScrollMode="always">
         <TextView
@@ -69,14 +32,47 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
-            android:textAlignment="viewStart"
+            android:textAlignment="center"
+            android:justificationMode="inter_word"
+            android:elegantTextHeight="true"
             android:textColor="@color/white"
             android:textSize="11pt"
-            android:textColorHint="@drawable/custom_text"
             android:isScrollContainer="true"></TextView>
     </ScrollView>
+    <Button
+        android:id="@+id/enviar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_baseline_send_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="4dp"
+        >
+    </Button>
 
-
-    </LinearLayout>
+    <EditText
+        android:id="@+id/texto"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/custom_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        android:ems="10"
+        android:padding="13dp"
+        android:textSize="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="14dp"
+        android:backgroundTint="@color/white"
+        android:hint="Digite seu nome..."
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+    </EditText>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
